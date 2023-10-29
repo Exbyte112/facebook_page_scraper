@@ -126,7 +126,7 @@ class Facebook_scraper:
         if os.path.exists("{}.csv".format(filename)):
             # if the CSV file already exists then switch to append mode
             mode = 'a'
-        with open("{}.csv".format(filename), mode, newline='', encoding="utf-8") as data_file:
+        with open("{}.csv".format(filename), mode, newline='', encoding="utf-8-sig") as data_file:
             # instantiate DictWriter for writing CSV file
             writer = csv.DictWriter(data_file, fieldnames=fieldnames)
             if mode == 'w':
